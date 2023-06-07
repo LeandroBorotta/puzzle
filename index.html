@@ -14,6 +14,11 @@
         .imagemGrande{
             width: 60%;
         }
+        .menos,
+        .mais{
+            cursor: pointer;
+        }
+
     </style>
     <title>Puzzle</title>
 </head>
@@ -85,6 +90,7 @@
     </div>
 
     <div class="offcanvas offcanvas-end" id="carrinho" tabindex="-1">
+        <div class="CarrinhoSemItens">
         <div class="offcanvas-header bgCinza align-items-center d-flex py-3">
             <span class="invisible">texto</span>
             <span class="h5 fw-bolder">Carrinho</span>
@@ -95,6 +101,23 @@
                 <span class="mb-3">Seu carrinho está vazio no momento</span>
                 <i class="bi-cart4 h1 fs-1 mb-3"></i>
                 <a href="index.html" class="btn btn-dark text-decoration-none">Comece a comprar</a>
+            </div>
+        </div>
+        </div>
+        <div class="CarrinhoComItens">
+            <div class="offcanvas-header bgCinza align-items-center d-flex py-3">
+                <span class="h5 fw-bolder invisible">texto</span>
+                <span class="h5 fw-bolder">Carrinho</span>
+                <button class="btn btn-close fs-5" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body mt-3">
+                <div class="container-fluid text-center d-flex flex-column">
+                    <ul class="list-unstyled ul" id="carrinho">
+
+                    </ul>
+                    <span class="h5 fw-bold align-self-end">Total: <span id="valorTotal">R$20,00</span></span>
+                    <a href="index.html" class="btn btn-dark text-decoration-none">Continuar comprando</a>
+                </div>
             </div>
         </div>
     </div>
@@ -125,155 +148,155 @@
     </section>
 
     <section class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mb-2">
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="1">
                     <img src="./imagens/camisa-nike1.jpg" alt="Produto 1" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa Sportwear HeatWave</span>
                             <span class="me-2">R$110,00</span>  <s>R$150,00</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="2">
                     <img src="./imagens/camisa-nike2.webp" alt="Produto 2" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa preta da Nike</span>
                             <span class="me-2">R$100,00</span>  <s>R$120,00</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="3">
                     <img src="./imagens/camisa-nike3.jpg" alt="Produto 3" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa SportWear preta</span>
                             <span class="me-2">R$70,99</span>  <s>R$99,99</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="4">
                     <img src="./imagens/camisa-nike4.jpg" alt="Produto 4" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa Just Do It Nike</span>
                             <span class="me-2">R$80,00</span>  <s>R$125,00</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mb-2">
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="5">
                     <img src="./imagens/camisa-nike5.jpg" alt="Produto 5" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa SportWear Money</span>
                             <span class="me-2">R$99,99</span>  <s>R$130,00</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="6">
                     <img src="./imagens/camisa-nike6.jpg" alt="Produto 6" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa Get Your Kicks</span>
                             <span class="me-2">R$210,00</span>  <s>R$350,00</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="7">
                     <img src="./imagens/camisa-nike7.jpg" alt="Produto 7" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa Nike Air Jordan</span>
                             <span class="me-2">R$50,99</span>  <s>R$100,00</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="8">
                     <img src="./imagens/camisa-nike8.jpg" alt="Produto 8" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Camisa Básica Cinza</span>
                             <span class="me-2">R$44,99</span>  <s>R$150,00</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             
         </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 ">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mb-2">
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="9">
                     <img src="./imagens/tenis-nike1.jpg" alt="Produto 9" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Tênis nike Sb Dunk Low</span>
                             <span class="me-2">R$510,99</span>  <s>R$899,99</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="10">
                     <img src="./imagens/tenis-nike2.webp" alt="Produto 10" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Tênis Sb Dunk Low Retro</span>
                             <span class="me-2">R$799,00</span>  <s>R$1100,99</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="11">
                     <img src="./imagens/tenis-nike4.webp" alt="Produto 11" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Tênis Nike Dunk High White</span>
                             <span class="me-2">R$899,99</span>  <s>R$1499,99</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" data-id="12">
                     <img src="./imagens/tenis-nike9.jpg" alt="Produto 12" class="card-img-top">
                     <div class="card-body text-center d-flex flex-column">
                         <div class="my-2">
                             <span class="fw-bolder h5">Tênis Sb Dunk Low Bear</span>
                             <span class="me-2">R$800,99</span>  <s>R$1500,99</s>
                         </div>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -304,7 +327,8 @@
 
 
 
-
+<script src="./js/produtos.js"></script>
+<script src="./js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>
 </html>
