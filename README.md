@@ -58,11 +58,14 @@ FRONT-END DE UM ECOMMERCE DE ROUPAS
 
 
 
-## Tecnologias utilizadas:
-- 👩‍💻 **HTML**
-- ⚛️ **CSS**
-- 👨‍💻 **Javascript**
-- ⚛️ **BOOTSTRAP**
+## Tecnologias utilizadas: 
+
+  <div style="display: inline-block"><br>
+  <img align="center" alt="Le-HTML" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Le-CSS" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="LE-Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="le-Python" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg">
+</div>
 
 ## Funcionalidades:
 - Carrinho de compras
